@@ -10,27 +10,45 @@
       </ul>
     </div>
   <% end %>
+<table border="1" bordercolor="#333333">
+<tr>
+<th>メニュー</th>
+<th>項目</th>
+</tr>
+<tr>
+	<th>アンケート名</th>
+	<td><%= f.text_field :name %></td>
+</tr>
 
-  <div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br />
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
+<tr>
+	<th>アンケート説明</th>
+	<td><%= f.text_area :note %></td>
+</tr>
+
+<tr>
+	<th>回答期限</th>
+	<td>
+		<%= f.date_select :date %>
+	</td>
+</tr>
+
+<tr>
+	<th>回答タイプ</th>
+	<td>
+		<%= f.text_field :type %>
+	</td>
+</tr>
+
+<tr>
+	<th>選択肢</th>
+	<td>
+		<%= f.text_field :type %></br>
+		※セミコロン区切りで入力
+	</td>
+</tr>
+	
+</table>
+
   <div class="actions">
     <%= f.submit %>
   </div>

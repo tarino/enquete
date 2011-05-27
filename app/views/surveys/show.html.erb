@@ -1,29 +1,43 @@
+<!--
+body {font-size: 14px;}
+p {font-size: 14px;}
+div {font-size: 14px;}
+td {font-size: 80%;}
+th {font-size: 120%; color:#ff0000; font-weight:bold;}
+--> 
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Id:</b>
-  <%= @survey.id %>
-</p>
+<table border="1" bordercolor="#333333">
+<tr>
+<th>メニュー</th>
+<th>項目</th>
+</tr>
+<tr>
+	<th>アンケート名</th>
+	<td><%= @survey.name %></td>
+</tr>
 
-<p>
-  <b>Name:</b>
-  <%= @survey.name %>
-</p>
+<tr>
+	<th>アンケート説明</th>
+	<td><%= @survey.note %></td>
+</tr>
 
-<p>
-  <b>Note:</b>
-  <%= @survey.note %>
-</p>
+<tr>
+	<th>回答期限</th>
+	<td>
+		<%= @survey.date %>
+	</td>
+</tr>
 
-<p>
-  <b>Date:</b>
-  <%= @survey.date %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @survey.type %>
-</p>
+<tr>
+	<th>回答タイプ</th>
+	<td>
+		<%= @survey.type %>
+	</td>
+</tr>
+	
+</table>
 
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |

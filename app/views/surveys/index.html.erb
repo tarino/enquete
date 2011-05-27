@@ -1,12 +1,18 @@
+<!--
+body {font-size: 14px;}
+p {font-size: 14px;}
+div {font-size: 14px;}
+td {font-size: 80%;}
+th {font-size: 120%; color:#ff0000; font-weight:bold;}
+--> 
+
 <h1>Listing surveys</h1>
 
-<table>
+<table border="1" bordercolor="#333333">
   <tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Note</th>
-    <th>Date</th>
-    <th>Type</th>
+    <th>アンケート名</th>
+    <th>回答状況</th>
+    <th>回答期限</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +20,9 @@
 
 <% @surveys.each do |survey| %>
   <tr>
-    <td><%= survey.id %></td>
     <td><%= survey.name %></td>
-    <td><%= survey.note %></td>
+	<td></td>
     <td><%= survey.date %></td>
-    <td><%= survey.type %></td>
     <td><%= link_to 'Show', survey %></td>
     <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
     <td><%= link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete %></td>
